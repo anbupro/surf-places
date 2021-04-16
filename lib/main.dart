@@ -1,3 +1,5 @@
+// import 'dart:html';
+
 import 'package:flutter/material.dart';
 
 void main() {
@@ -22,7 +24,43 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
+      // home: MyHomePage(title: 'Flutter Demo Home Page'),
+      home: MyFirstWidget2(),
+    );
+  }
+}
+
+class MyFirstWidget extends StatelessWidget {
+  int _counter = 1;
+
+  @override
+  Widget build(BuildContext context) {
+    print(_counter++);
+
+    return Container(
+      child: Center(
+        child: Text('Hello!'),
+      ),
+    );
+  }
+}
+
+class MyFirstWidget2 extends StatefulWidget {
+  @override
+  _MyFirstWidget2State createState() => _MyFirstWidget2State();
+}
+
+class _MyFirstWidget2State extends State<MyFirstWidget2> {
+  int _counter = 1;
+
+  @override
+  Widget build(BuildContext context) {
+    print(_counter++);
+
+    return Container(
+      child: Center(
+        child: Text('Hello!'),
+      ),
     );
   }
 }
